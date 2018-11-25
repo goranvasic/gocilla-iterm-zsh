@@ -1,5 +1,7 @@
 # Gocilla theme for iTerm2 and Oh My Zsh!
 
+![alt text](https://raw.githubusercontent.com/goranvasic/gocilla-iterm-zsh/master/screenshot.png "Screenshot")
+
 ## Installation
 
 1. Copy `Gocilla.zsh-theme` to `~/.oh-my-zsh/custom/themes/` and set `ZSH_THEME="Gocilla"` in `~/.zshrc` file.
