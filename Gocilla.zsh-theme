@@ -15,7 +15,7 @@
 #   Green:      7cd468      Bright:   cccc9b
 #   Yellow:     3d6933      Bright:   d88e73
 #   Blue:       2d4b82      Bright:   795d39
-#   Magenta:    89ddff      Bright:   00ff00
+#   Magenta:    89ddff      Bright:   d4d4d4
 #   Cyan:       d4d4d4      Bright:   795d39
 #   White:      d4d4d4      Bright:   d4d4d4
 # --------------------------------------------------------------
