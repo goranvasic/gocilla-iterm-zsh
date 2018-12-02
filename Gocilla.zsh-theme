@@ -37,6 +37,8 @@ PS1="%F{green}%n@%m%f "                         # user@host
 PS1=$PS1"%F{cyan}\$(date +%d-%m-%Y)%f "         # DD-MM-YYYY
 PS1=$PS1"%F{yellow}%~%f "                       # path
 PS1=$PS1"%F{magenta}\$(git_prompt_info)%f"      # git branch
-PS1=$PS1$'\n'"%(?.%F{green}.%F{red})❯%f "       # ❯
+PS1=$PS1$'\n'                                   # \n
+PS1=$PS1"%(?.%F{green}.%F{red})❯%f "            # ❯
+#PS1=$PS1"%(?.%F{green}.%F{red})$%f "           # $
 
 export PROMPT=$PS1

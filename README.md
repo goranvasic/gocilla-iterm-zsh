@@ -14,4 +14,9 @@
 Works well with patched [Source Code Pro](https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf) font (14px).
 
 You can also install `coreutils` via Homebrew, and in `~/.zshrc` file you can alias `ll` to:
+
 `alias ll='gls --color -lha --group-directories-first'`
+
+If Zsh tab completion is duplicating command names, make sure to set this in your `~/.zshrc` file:
+
+`LC_CTYPE=en_US.UTF-8`
