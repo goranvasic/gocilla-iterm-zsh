@@ -28,16 +28,25 @@
 # Works well with patched Source Code Pro font (14px):
 # https://github.com/powerline/fonts/blob/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
 
-ZSH_THEME_GIT_PROMPT_PREFIX="("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
-ZSH_THEME_GIT_PROMPT_DIRTY="*"
+# Required for Oh My Zsh! parsing of Git branch:
+# ZSH_THEME_GIT_PROMPT_PREFIX="("
+# ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+# ZSH_THEME_GIT_PROMPT_CLEAN=""
+# ZSH_THEME_GIT_PROMPT_DIRTY="*"
 
-PS1="%F{green}%n@%m%f "                         # user@host
-PS1=$PS1"%F{cyan}\$(date +%d-%m-%Y)%f "         # DD-MM-YYYY
-PS1=$PS1"%F{yellow}%~%f "                       # path
-PS1=$PS1"%F{magenta}\$(git_prompt_info)%f"      # git branch
-PS1=$PS1$'\n'                                   # \n
+parse_git_branch() {
+  GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` 2>/dev/null
+  if [[ ! -z $GIT_BRANCH ]]; then
+    print -f "($GIT_BRANCH)"
+  fi
+}
+
+PS1="%F{green}%n@%m%f "                          # user@host
+PS1=$PS1"%F{cyan}\$(date +%d-%m-%Y)%f "          # DD-MM-YYYY
+PS1=$PS1"%F{yellow}%~%f "                        # Current path.
+PS1=$PS1"%F{magenta}\$(parse_git_branch)%f"      # Parse git branch.
+#PS1=$PS1"%F{magenta}\$(git_prompt_info)%f"      # git branch Oh My Zsh! way. Adds * for dirty branches, but it is much slower.
+PS1=$PS1$'\n'                                    # \n
 PS1=$PS1"%(?.%F{green}.%F{red})❯%f "            # ❯
 #PS1=$PS1"%(?.%F{green}.%F{red})$%f "           # $
 
