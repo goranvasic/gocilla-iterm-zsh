@@ -1,6 +1,6 @@
 # Gocilla theme for iTerm2 and Oh My Zsh!
 
-![alt text](https://raw.githubusercontent.com/goranvasic/gocilla-iterm-zsh/master/screenshot.png "Screenshot")
+![alt text](https://raw.githubusercontent.com/goranvasic/gocilla-iterm-zsh/main/screenshot.png "Screenshot")
 
 ## Installation
 
